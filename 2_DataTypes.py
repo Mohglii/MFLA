@@ -291,3 +291,5 @@ my_list = ['GOOG', 'APPL', 'T','TSLA','T','AAPL', 5, 6,5]
 out = list(set(my_list))
 
 
+random = {'candy', ' sports car', 8, 'spagetti', 'music','candy,', 8}
+print(random)
