@@ -3,8 +3,8 @@
 # 1. NUMPY BASICS
 """
 
-# NumPy is a Linear Algebra Library used for multidimensional arrays
-# NumPy brings the best of two worlds: (1) C/Fortran computational efficiency, (2) Python language easy syntax 
+"""NumPy is a Linear Algebra Library used for multidimensional arrays
+NumPy brings the best of two worlds: (1) C/Fortran computational efficiency, (2) Python language easy syntax """
 import numpy as np 
 mylist =[10,20,50,60,70]
 print(mylist)
@@ -29,190 +29,189 @@ print(matrix)
 ```
 [[4 6 8 7] 
 [20 5 6 9]]
-```
-"""
+# # ```
+# # """
 
-challenge = np.array([[4,6,8,7], [20,5,6,9]])
-print(challenge)
+# challenge = np.array([[4,6,8,7], [20,5,6,9]])
+# print(challenge)
 
 
 # """# 2. BUILT-IN METHODS AND FUNCTIONS """
 
-# # "rand()" uniform distribution between 0 and 1
+ # "rand()" uniform distribution between 0 and 1
 x = np.random.rand(15)
 print(x)
-numbers generated from uniform distribution
-
-# you can create a matrix of random number as well
+# you can create a matri x of random number as well
 xx = np.random.rand(5,5)
 print(xx)
-
 # # "randn()" normal distribution between 0 and 1
-
 xxx= np.random.randn(10)
 print(xxx)
 
+
+#single random integer 
 # # "randint" is used to generate random integers between upper and lower bounds
+a= np.random.randint(1,10)
+print(a)
+# multiple random integers
+aa = np.random.randint(1,100,15)
+print(aa)
 
-x2 = np.random.randint(1,10)
-print(x2)
 
-x3= np.random.randint(1,100,15)
-print(x3)
+
+#even distribution
 
 # # np.arange creates an evenly spaced values within a given interval
-a = np.arange(1,50)
-print(a)
-
-# Create an evenly spaced values with a step of 5
-aa = np.arange(1,50,5)
-print(aa)
-# # create a diagonal of ones and zeros everywhere else
-b = np.eye(15)
+b = np.arange(1, 50)
 print(b)
-# # Array of ones
-bb = np.ones(10)
+# Create an evenly spaced values with a step of 5
+bb = np.arange(1, 50, 5)
 print(bb)
-# # Matrices of ones
-bbb = np.ones((15,15))
-# # Array of zeros
-c = np.zeros(50)
-print(c)
 
+
+
+
+# create a diagonal of ones and zeros everywhere else
+covariance and matrix matrices and stock predictions
+c = np.eye(15)
+print(c)
+# # Array of ones
+cc= np.ones(10)
+print(cc)
+# # Matrices of ones
+ccc= np.ones((15,15))
+print(ccc)
+# # Array of zeros
+d = np.zeros(50)
+print(d)
 
 """**MINI CHALLENGE #2:**
 - **Write a code that takes in a number x from the user
     creates a 1x20 array with random numbers ranging from 0 to x**
 # """
 
-inp = int(input('enter a number?: '))
-inpp = np.random.randint(1,inp,20)
-print(inpp)
-
+# x = int(input('enter a random number: '))
+# xx = np.random.randint(1,x,20)
+# print(xx)
 
 
 """# 3. SHAPE, LENGTH, TYPE, RESHAPE, AND MAX/MIN VALUES"""
 
-# Let's define a one-dimensional array
+"""Let's define a one-dimensional array"""
+mylist = [-30,4,50,60,29,15,22,90]
+x = np.array(mylist)
 
-"""Get Length of a numpy array
 
-Get shape
+# """Get Length of a numpy array
+print(len(x))
+# Get shape
+print(x.shape)
+ 
+# Obtain the datatype
+print(x.dtype)
 
-Obtain the datatype
+# Reshape 1D array into a matrix
+z = x.reshape(2,4)
+print(z)
 
-Reshape 1D array into a matrix
 
-Obtain the maximum element (value)
-
-Obtain the minimum element (value)
-
+# Obtain the maximum element (value)
+print(x.max())
+# Obtain the minimum element (value)
+print(x.min())
 Obtain the location of the max element
+print(x.argmax)
 
-Obtain the location of the min element"""
+# Obtain the location of the min element"""
+print(x.argmin)
 
-"""**MINI CHALLENGE #3:**
-- **Write a code that creates a 4x5 array inwhich numbers range between 300 and 500 such that the difference between elements is 10**
-# """
 
-b = list(range(300,500,10))
-c = np.array(b)
-d = c.reshape(4,5)
-print(d)
-# print(x3)
+# """**MINI CHALLENGE #3:**
+# - **Write a code that creates a 4x5 array inwhich numbers range between 300 and 500 such that the difference between elements is 10**
+# # """
 
-c = np.array
-print(c)
+x = list(range(300,500,10))
+xx = np.array(x)
+xxx = xx.reshape(4,5)
+print(xxx)
 
 
 # "# """**MINI CHALLENGE #4:**
 """- **Write a code that creates a 20x20 numpy array of random values that ranges from -1000 to 1000 and obtain the maximum, minimum, and mean values** 
 """
-
-b = np.arange(-1000,1000,10)
-print(b)
-# print(x3)
-
-
-x = np.random.randint(-1000,1000,(20,20))
-print(x.max())
-print(x.min())
-print(x.mean())
-v3 = v2.reshape(20,20)
-print(v3)
-
-
+g = np.random.randint(-1000,1000,(20,20))
+print(g.max())
+print(g.min())
+print(g.mean())
 
 """# 4. MATHEMATICAL OPERATIONS"""
-# np.arange() returns an evenly spaced values within a given interval
 
-x= np.arange(1,10)
-y= np.arange(1,10)
-# sum = x+y
+x = np.arange(1,10)
+y = np.arange(1,10)
+zysum = x+y
 
+#sqaure
 squared = x**2
 print(squared)
 
-sqrt= np.sqrt(squared)
-
+#square root
+sqrt = np.sqrt(squared)
 print(sqrt)
 
-z= np.exp(sqrt)
+#exponential value for np array 
+z = np.exp(y)
 print(z)
 
 
 """**MINI CHALLENGE #5:**
 - **Given the X and Y values below, obtain the distance between them**
-x = [3, 20, 30]
-y = [4, 6, 7]
-x=np.array(x)
-y=np.array(y)
-z= np.sqrt(x**2+y**2)
-print(z)
+
+x = [3,20,30]
+y = [4,6,7]
+
+xx=np.array(x)
+yy=np.array(y)
+
+distance = np.sqrt(xx+yy)
+print(distance)
+
+
+
 
 """# 5. SLICING AND INDEXING """
-
 x = np.array([20,40,50,21,15])
+
+
 # # Access specific index from the numpy array
 print(x[0])
-print(x[2])
 # # Starting from the first index 0 up until and NOT inlcluding the last element
-print(x[0:3])
+print(x[0:5])
+
 # # Broadcasting, altering several values in a numpy array at once
-x[0:4]=54
-# print(x)
+x[0:2] = 10
+print(x)
 
 # Let's define a two dimensional numpy a"rray
 matrix = np.random.randint(1,10,(5,5))
-# print(matrix)
-# # print()
+ 
+#access a row 
+matrix[2]
 
+#specific element
+matrix[0][2]
+matrix[0][3]
 
-# print(matrix[4][2])
+#obtain multiple rows in a mini matrix 
+mm= matrix[:3]
+print(mm)
 
-# print(matrix[2])
+#obtain a series of rows with specified columns 
+mini = matrix[:,2:]
+print(mini)
 
-# list3 = []
-# list3.append(matrix[4][2])
-# print(list3)
-
-create a 'mini matrix' (sublist from larger matrix)
-#slice all elements from 0-3
-matrix = np.random.randint(1,10,(5,5))
-minimatrix = matrix[:3]
-print(minimatrix)
-
-mm2= matrix[:,2:]
-print(mm2)
-
-
-mm3=matrix[:,:2]
-print(mm3)
-"""**MINI CHALLENGE #6:**
-- **In the following matrix, replace the last row with -1**
-- **Multiply the 2x2 matrix in the upper right corner by 2**
-
-
+# """**MINI CHALLENGE #6:**
+# - **In the following matrix, replace the last row with -1**
+# - **Multiply the 2x2 matrix in the upper right corner by 2**"""
 
 x = np.array([
     [2, 30, 20, -2, -4],
@@ -221,38 +220,41 @@ x = np.array([
     [25, 45, 34, 22, 12],
     [13, 24, 22, 32, 37],
     ])
-x[4]=(-1)
-x[:2,3:5]= x[:2,3:5]*2
+
+x[4] = -1
+x[:2,3:] =x[:2,3:] *2
 print(x)
+
 
 
 # 6. ELEMENTS SELECTION (CONDITIONAL)
-"""
+
 """how to select specific elements witin  a np.array that satisfies conditional criteria"""
 matrix = np.random.randint(1,10,(5,5))
 #lets say i need to obtain elements that are greater than 3 only 
-newm= matrix[matrix>3]
-print(newm)
-#lets say i need to obtain elements that are less than 4 only 
-newm2  = matrix[matrix<=4]
-print(newm2)
-#lets say i need to obtain elements that are even only
-newm3 = matrix[matrix%2==0]
-print(newm3)
-#lets say i need to obtain elements that are odd only
-newm4 = matrix[matrix%3==0]
-print(newm4)
+new = matrix[matrix>3]
 
+#lets say i need to obtain elements that are less than 4 only 
+new2 = matrix[matrix<4]
+
+#lets say i need to obtain elements that are even only
+new3 = matrix[matrix%2==0]
+
+#lets say i need to obtain elements that are odd only
+new4 = matrix[matrix%3==0]
 """**MINI CHALLENGE #7:**
 - **In the following matrix, replace negative elements by 0 and replace odd elements with 25**"""
 
+x = np.array([
+    [2, 30, 20, -2, -4],
+    [3, 4,  40, -3, -2],
+    [-3, 4, -6, 90, 10], 
+    [25, 45, 34, 22, 12],
+    [13, 24, 22, 32, 37],
+    ])
 
-x = np.array([[2, 30, 20, -2, -4],
-              [3, 4,  40, -3, -2],
-              [-3, 4, -6, 90, 10],
-              [25, 45, 34, 22, 12],
-              [13, 24, 22, 32, 37]])
 
 x[x%2==1]=25
-x[x<0]=0
+x[0>x]=0
 print(x)
+
